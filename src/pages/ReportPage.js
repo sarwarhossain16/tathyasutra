@@ -1,58 +1,78 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
-import climateImg from "../assets/climate.jpg";
-import aiHealthcareImg from "../assets/ai_healthcare.jpg";
-import cybersecurityImg from "../assets/cybersecurity.jpg";
-import energyImg from "../assets/energy.jpg";
-import mentalHealthImg from "../assets/mental_health.jpg";
+import floodImg from "../assets/flood.jpg";
+import garmentImg from "../assets/garment.jpg";
+import digitalBangladeshImg from "../assets/digital_bangladesh.jpg";
+import padmaBridgeImg from "../assets/padma_bridge.jpg";
+import ruralDevImg from "../assets/rural_dev.jpg";
 import "../styles.css";
 
 const reportDetails = {
   1: {
-    title: "Climate Change and Its Effects",
-    content: `Climate change is one of the most pressing issues of our time. It is driven primarily by human activities, such as burning fossil fuels, deforestation, and industrial emissions, which release greenhouse gases into the atmosphere. These gases trap heat and cause global temperatures to rise, leading to more extreme weather events, rising sea levels, and disruptions in natural ecosystems.
-
-    The impact of climate change can be observed in various ways. Rising temperatures contribute to longer and more intense heatwaves, leading to droughts and reduced water availability. Agriculture is significantly affected, as many crops fail due to unfavorable weather conditions, causing food shortages and higher prices.
-
-    Mitigation strategies to combat climate change include transitioning to renewable energy sources, implementing energy-efficient practices, reforestation efforts, and advocating for strong international policies. Governments, corporations, and individuals must work collectively to reduce emissions and create sustainable solutions.`,
-    image: climateImg,
+    title: "Impact of Floods in Bangladesh",
+    author: "Md. Rezaul Karim",
+    date: "2024-03-10",
+    content: [
+      `Bangladesh is one of the most flood-prone countries in the world due to its geographical location and monsoon climate. Every year, large parts of the country experience devastating floods that lead to loss of lives, destruction of property, and significant economic downturns. The country’s extensive river network, which includes the Ganges, Brahmaputra, and Meghna rivers, contributes to the severity of flooding, especially during the monsoon season.`,
+      
+      `The impact of floods extends beyond immediate physical destruction. Thousands of families are displaced annually, losing access to basic necessities like clean water, food, and healthcare. Additionally, farmlands are submerged, causing severe food shortages and price hikes. Livestock, which many rural families rely on for sustenance and income, is often lost during the floods.`,
+      
+      `Despite these challenges, Bangladesh has made significant progress in disaster preparedness. The government, alongside international organizations, has improved early warning systems, built embankments, and implemented community-based flood management programs. Future efforts should focus on sustainable urban planning, improved drainage systems, and reforestation projects to mitigate the impact of floods in the coming years.`
+    ],
+    image: floodImg,
   },
   2: {
-    title: "Artificial Intelligence in Healthcare",
-    content: `Artificial intelligence (AI) is revolutionizing the field of healthcare by improving diagnostics, treatment plans, and patient care. AI-powered systems can analyze vast amounts of medical data, helping doctors detect diseases at an earlier stage and with higher accuracy.
-
-    Another area where AI is making strides is personalized medicine. By analyzing a patient’s genetic information and medical history, AI can recommend tailored treatments that are more effective and have fewer side effects. AI-powered chatbots and virtual assistants also play a role in enhancing patient experience by providing instant medical advice and appointment scheduling.
-
-    However, AI in healthcare also presents challenges, such as data privacy concerns, ethical considerations, and the need for rigorous testing and regulatory approval. As AI continues to evolve, it has the potential to transform the healthcare industry, making medical services more accessible and efficient.`,
-    image: aiHealthcareImg,
+    title: "Garment Industry and Worker Rights",
+    author: "Fatema Begum",
+    date: "2024-03-12",
+    content: [
+      `Bangladesh’s Ready-Made Garments (RMG) industry is one of the country's largest economic sectors, accounting for over 80% of its export earnings. The industry employs millions of workers, predominantly women, and has played a crucial role in reducing poverty and improving economic conditions.`,
+      
+      `However, despite its success, the sector has long been criticized for unsafe working conditions, low wages, and lack of workers’ rights. The tragic Rana Plaza collapse in 2013, which killed over 1,100 workers, highlighted the dangers of inadequate labor regulations. In response, several global and local organizations implemented safety measures, including the Accord and Alliance initiatives that enforced factory inspections and compliance with international safety standards.`,
+      
+      `Moving forward, sustainable growth in the garment industry requires ensuring fair wages, providing social benefits for workers, and improving trade union representation. Strengthening labor laws and holding employers accountable will be crucial in making Bangladesh’s RMG sector both profitable and ethical.`
+    ],
+    image: garmentImg,
   },
   3: {
-    title: "Cybersecurity in the Digital Age",
-    content: `Cybersecurity has become a major concern as we move further into the digital era. With increased dependence on the internet for financial transactions, communication, and personal data storage, cyber threats have escalated in complexity and scale. Hackers employ various techniques such as phishing, ransomware attacks, and data breaches to exploit vulnerabilities.
-
-    Governments and organizations are investing heavily in cybersecurity measures to safeguard sensitive data. Encryption, multi-factor authentication, and real-time threat detection systems are among the key technologies used to mitigate cyber risks. Individuals also play a crucial role in ensuring their online safety by using strong passwords, being cautious of suspicious emails, and keeping software updated.
-
-    The future of cybersecurity will involve AI-driven threat detection, blockchain for secure transactions, and increased global collaboration to combat cybercrime. As technology advances, the need for robust cybersecurity measures will remain a top priority.`,
-    image: cybersecurityImg,
+    title: "Digital Bangladesh: Progress & Challenges",
+    author: "Shakib Rahman",
+    date: "2024-03-14",
+    content: [
+      `The 'Digital Bangladesh' initiative was launched in 2009 with the aim of transforming Bangladesh into a tech-driven economy. Over the years, this vision has led to major improvements in public administration, digital banking, e-commerce, and internet connectivity.`,
+      
+      `One of the biggest successes of Digital Bangladesh has been the expansion of mobile financial services like bKash, Nagad, and Rocket. These platforms have increased financial inclusion, allowing people in rural areas to access banking services without physical bank branches. Additionally, government services have become more accessible, with initiatives like e-GP (electronic government procurement) and digital birth registration.`,
+      
+      `Despite the progress, challenges remain. The digital divide between urban and rural areas is significant, with many villages still lacking access to high-speed internet. Cybersecurity threats have also increased, necessitating stronger data protection policies. To fully realize the potential of Digital Bangladesh, investment in ICT education, improved digital literacy, and enhanced cybersecurity measures will be essential.`
+    ],
+    image: digitalBangladeshImg,
   },
   4: {
-    title: "Sustainable Energy Solutions",
-    content: `Sustainable energy solutions are essential for tackling the energy crisis. The world is shifting from fossil fuels to renewable energy sources such as solar, wind, and hydroelectric power. These clean energy solutions offer a way to reduce carbon emissions and slow the effects of climate change.
-
-    The development of energy storage technologies, such as advanced batteries, has improved the efficiency of renewable energy sources. Smart grids and energy-efficient infrastructure are also playing a role in optimizing power distribution and consumption.
-
-    Investing in sustainable energy requires global cooperation. Governments must implement policies that support clean energy initiatives, while individuals and businesses must adopt sustainable practices. The future of energy depends on our ability to innovate and transition towards a more sustainable world.`,
-    image: energyImg,
+    title: "Padma Bridge: Economic Impact",
+    author: "Nasrin Jahan",
+    date: "2024-03-16",
+    content: [
+      `The Padma Bridge, Bangladesh’s longest bridge, is a landmark infrastructure project that has significantly enhanced connectivity between Dhaka and the country's southwestern regions. Before its construction, people had to rely on ferries, leading to long travel delays and economic inefficiencies.`,
+      
+      `The completion of the bridge has already boosted trade and commerce by improving access to key markets. Businesses in Khulna, Barisal, and other southwestern districts now have quicker access to Dhaka, reducing transportation costs and improving supply chains. The agriculture sector has also benefited, as farmers can now transport perishable goods faster, increasing their market value.`,
+      
+      `Looking ahead, experts predict that the bridge will contribute up to 1.2% to Bangladesh’s GDP. Further development in surrounding areas, including industrial zones and improved transport networks, will ensure long-term economic gains. Investments in sustainable infrastructure planning will be necessary to maintain and maximize the bridge’s economic impact.`
+    ],
+    image: padmaBridgeImg,
   },
   5: {
-    title: "Mental Health Awareness",
-    content: `Mental health is just as important as physical health, yet it is often overlooked. Millions of people worldwide suffer from mental health disorders, including depression, anxiety, and bipolar disorder. The stigma surrounding mental illness prevents many from seeking help.
-
-    Raising awareness about mental health is crucial for early diagnosis, intervention, and treatment. Therapy, medication, and lifestyle changes can significantly improve mental well-being. Schools and workplaces are beginning to integrate mental health programs to support individuals in managing stress and emotional challenges.
-
-    Encouraging open conversations about mental health, promoting self-care practices, and ensuring access to professional support can create a society where mental well-being is prioritized. Breaking the stigma and providing adequate mental health resources are necessary steps towards improving lives.`,
-    image: mentalHealthImg,
+    title: "Rural Development in Bangladesh",
+    author: "Aminul Haque",
+    date: "2024-03-18",
+    content: [
+      `Bangladesh has made remarkable progress in rural development, with poverty levels dropping significantly over the past two decades. Various government initiatives and NGO-led projects have focused on improving rural infrastructure, education, healthcare, and access to financial services.`,
+      
+      `Microfinance institutions like Grameen Bank and BRAC have played a crucial role in empowering rural communities by providing small loans to entrepreneurs, particularly women. Additionally, road networks and electrification projects have facilitated better transportation and economic activities in previously isolated villages.`,
+      
+      `However, challenges such as seasonal unemployment, climate-induced displacement, and a lack of industrial opportunities still persist. Future strategies should focus on vocational training programs, expanding internet access for e-commerce opportunities, and sustainable agricultural development to ensure continued progress in rural Bangladesh.`
+    ],
+    image: ruralDevImg,
   },
 };
 
@@ -72,11 +92,15 @@ const ReportPage = () => {
   return (
     <div>
       <Header />
-      <div className="report-detail">
-        <h2 className="report-title">{report.title}</h2>
-        <div className="report-layout">
-          <img src={report.image} alt={report.title} className="report-detail-image" />
-          <p className="report-content">{report.content}</p>
+      <div className="single-report-container">
+        <h2 className="single-report-title">{report.title}</h2>
+        <p className="single-report-author">Updated by: {report.author}</p>
+        <p className="single-report-date">Date of Publication: {report.date}</p>
+        <div className="single-report-layout">
+          <img src={report.image} alt={report.title} className="single-report-image" />
+          {report.content.map((paragraph, index) => (
+            <p key={index} className="single-report-content">{paragraph}</p>
+          ))}
         </div>
       </div>
     </div>

@@ -13,6 +13,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const toggleSearchPopup = () => {
     setIsSearchOpen(!isSearchOpen);
   };
@@ -29,13 +33,18 @@ const Header = () => {
 
       {/* Hamburger Icon for Mobile */}
       <button className="hamburger-icon" onClick={toggleMenu}>
-        {isMenuOpen ? <FaTimes /> : <FaBars />}
+        <FaBars />
       </button>
 
       {/* Sidebar Menu (Mobile) */}
       <nav className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
-        <Link to="/download" className="nav-item" onClick={toggleMenu}>Download</Link>
-        <Link to="/login" className="login-button" onClick={toggleMenu}>Login</Link>
+        {/* Close Button (❌) */}
+        <button className="close-menu" onClick={closeMenu}>
+          <FaTimes />
+        </button>
+
+        <Link to="/download" className="nav-item" onClick={closeMenu}>Download</Link>
+        <Link to="/login" className="login-button" onClick={closeMenu}>Login</Link>
         <button className="language-toggle" onClick={toggleLanguage}>{language}</button>
         <button className="search-icon" onClick={toggleSearchPopup}>
           <FaSearch /> Search

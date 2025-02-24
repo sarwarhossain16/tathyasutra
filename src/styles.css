@@ -193,67 +193,117 @@
   }
 
 
+/* Report Blocks Container */
 .reports-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 10%;
-  }
-  
-  .report-block {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background: white;
-    margin: 15px 0;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    color: black;
-    transition: transform 0.3s;
-  }
-  
-  .report-block:hover {
-    transform: scale(1.02);
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .report-image {
-    width: 40%;
-    border-radius: 10px;
-  }
-  
-  .report-content {
-    padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10%;
+}
+
+/* Individual Report Block */
+.report-block {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: white;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: black;
+  transition: transform 0.3s;
+}
+
+.report-block:hover {
+  transform: scale(1.02);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Report Image */
+.report-image {
+  width: 35%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Report Content */
+.report-content {
+  flex: 1;
+  padding-left: 15px;
+}
+
+/* Title & Description */
+.report-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.report-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Author & Date (Smaller & Grey Font) */
+.report-author, .report-date {
+  font-size: 0.85rem;
+  font-family: 'Arial', sans-serif;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+/* Report Actions (Share & Collaborate Buttons) */
+.report-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.share-button, .collaborate-button {
+  background-color: #4B0082;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.share-button:hover, .collaborate-button:hover {
+  background-color: #6A0DAD;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .reports-container {
+    margin: 0 5%;
   }
 
-  .report-detail {
-    padding: 20px;
-    max-width: 80%;
-    margin: auto;
-  }
-  
-  .report-layout {
-    display: flex;
+  .report-block {
     flex-direction: column;
-    align-items: center;
-    text-align: justify;
+    text-align: center;
+    padding: 10px;
   }
-  
-  .report-detail-image {
-    width: 60%;
-    height: auto;
-    max-width: 500px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+
+  .report-image {
+    width: 80%;
+    margin-bottom: 10px;
   }
-  
+
   .report-content {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 80%;
+    padding-left: 0;
   }
+
+  .report-actions {
+    justify-content: center;
+  }
+}
+
 
   .auth-container {
     display: flex;
@@ -337,9 +387,10 @@
   }
   
   .dashboard-input, .dashboard-textarea, .dashboard-file {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    width: 100%;
   }
   
   .dashboard-textarea {
@@ -347,19 +398,26 @@
     resize: vertical;
   }
   
-  .dashboard-submit, .dashboard-logout {
+  .dashboard-submit {
     background-color: #4B0082;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 1rem;
-    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
   }
   
-  .dashboard-submit:hover, .dashboard-logout:hover {
+  .dashboard-submit:hover {
     background-color: #6A0DAD;
+  }
+  
+  .dashboard-section-title {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    text-align: center;
+    color: #333;
   }
   
   .dashboard-reports {
@@ -374,7 +432,54 @@
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
+    text-align: left;
   }
+  
+  .report-meta {
+    font-size: 0.85rem;
+    color: gray;
+  }
+  
+  .download-button {
+    background-color: #4B0082;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .download-button:hover {
+    background-color: #6A0DAD;
+  }
+  
+  .dashboard-logout {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  .dashboard-logout:hover {
+    background-color: #ff6666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard-form {
+      width: 90%;
+    }
+  
+    .dashboard-reports {
+      width: 90%;
+    }
+  }
+  
 
   .downloads-container {
     display: flex;
@@ -478,4 +583,179 @@
 .collaborate-button:hover {
   background-color: #003cff9a;
   transform: scale(1.05);
+}
+
+/* Single Report Container */
+.single-report-container {
+  padding: 20px;
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+/* Title */
+.single-report-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Author & Date */
+.single-report-author, .single-report-date {
+  font-size: 0.9rem;
+  font-family: 'Arial', sans-serif;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Report Layout */
+.single-report-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding-top: 10px;
+}
+
+/* Report Image */
+.single-report-image {
+  width: 70%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Report Content */
+.single-report-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 80%;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .single-report-container {
+    max-width: 95%;
+  }
+
+  .single-report-image {
+    width: 90%;
+  }
+
+  .single-report-content {
+    max-width: 100%;
+  }
+}
+
+.collaborate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+.collaborate-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  max-width: 500px; /* ✅ Prevents the form from becoming too large */
+  text-align: center;
+}
+
+.collaborate-title {
+  font-size: 2rem;
+  color: #4B0082;
+  margin-bottom: 10px;
+}
+
+.collaborate-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.collaborate-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* ✅ Ensures form fields stay within the box */
+  max-width: 400px; /* ✅ Prevents inputs from being too wide */
+}
+
+.form-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  text-align: left;
+}
+
+.form-input, .form-textarea {
+  width: 100%; /* ✅ Makes sure inputs take full width inside the box */
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box; /* ✅ Prevents extra spacing issues */
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: #4B0082;
+  outline: none;
+}
+
+.form-textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.form-button {
+  background-color: #4B0082;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+  max-width: 400px; /* ✅ Ensures button stays aligned */
+}
+
+.form-button:hover {
+  background-color: #6A0DAD;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .collaborate-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .collaborate-title {
+    font-size: 1.5rem;
+  }
+
+  .form-input, .form-textarea {
+    font-size: 0.9rem;
+  }
+
+  .form-button {
+    font-size: 0.9rem;
+  }
 }
