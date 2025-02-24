@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Header from "../components/Header";
 import climateImg from "../assets/climate.jpg";
 import aiHealthcareImg from "../assets/ai_healthcare.jpg";
@@ -9,11 +9,11 @@ import mentalHealthImg from "../assets/mental_health.jpg";
 import "../styles.css";
 
 const reports = [
-  { id: 1, title: "Climate Change and Its Effects", description: "How climate change is altering ecosystems worldwide.", image: climateImg },
-  { id: 2, title: "Artificial Intelligence in Healthcare", description: "How AI is transforming medical treatments and diagnostics.", image: aiHealthcareImg },
-  { id: 3, title: "Cybersecurity in the Digital Age", description: "A comprehensive analysis of modern cybersecurity threats.", image: cybersecurityImg },
-  { id: 4, title: "Sustainable Energy Solutions", description: "The future of renewable energy and its global impact.", image: energyImg },
-  { id: 5, title: "Mental Health Awareness", description: "The importance of mental health in today’s fast-paced world.", image: mentalHealthImg },
+  { id: 1, title: "Climate Change and Its Effects", description: "How climate change is altering ecosystems worldwide.", image: climateImg, author: "John Doe", date: "2024-03-10" },
+  { id: 2, title: "Artificial Intelligence in Healthcare", description: "How AI is transforming medical treatments and diagnostics.", image: aiHealthcareImg, author: "Jane Smith", date: "2024-03-12" },
+  { id: 3, title: "Cybersecurity in the Digital Age", description: "A comprehensive analysis of modern cybersecurity threats.", image: cybersecurityImg, author: "Michael Johnson", date: "2024-03-14" },
+  { id: 4, title: "Sustainable Energy Solutions", description: "The future of renewable energy and its global impact.", image: energyImg, author: "Emily Davis", date: "2024-03-16" },
+  { id: 5, title: "Mental Health Awareness", description: "The importance of mental health in today’s fast-paced world.", image: mentalHealthImg, author: "Sarah Brown", date: "2024-03-18" },
 ];
 
 const LandingPage = () => {
@@ -33,6 +33,12 @@ const LandingPage = () => {
             <div className="report-content">
               <h3 className="report-title">{report.title}</h3>
               <p className="report-description">{report.description}</p>
+              <p className="report-author">Uploaded by: {report.author}</p>
+              <p className="report-date">Date of Publication: {report.date}</p>
+              <div className="report-actions">
+                <button className="share-button">Share</button>
+                <Link to={`/collaborate/${report.id}`} className="collaborate-button">Collaborate</Link>
+              </div>
             </div>
           </div>
         ))}
