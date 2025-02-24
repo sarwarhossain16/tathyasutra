@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tathyasutra/static/css/main.e627e70a.css",
-    "main.js": "/tathyasutra/static/js/main.37a967d4.js",
+    "main.css": "/tathyasutra/static/css/main.3e1b8621.css",
+    "main.js": "/tathyasutra/static/js/main.4a9b2ac9.js",
     "static/js/453.daa1c54f.chunk.js": "/tathyasutra/static/js/453.daa1c54f.chunk.js",
     "static/media/energy.jpg": "/tathyasutra/static/media/energy.b6570ea0553936b0e1b2.jpg",
     "static/media/ai_healthcare.jpg": "/tathyasutra/static/media/ai_healthcare.acc33f95a2a68263aa45.jpg",
@@ -9,12 +9,12 @@
     "static/media/cybersecurity.jpg": "/tathyasutra/static/media/cybersecurity.d9a9ab6a748229087285.jpg",
     "static/media/climate.jpg": "/tathyasutra/static/media/climate.4f7173d0f90f2117f3fd.jpg",
     "index.html": "/tathyasutra/index.html",
-    "main.e627e70a.css.map": "/tathyasutra/static/css/main.e627e70a.css.map",
-    "main.37a967d4.js.map": "/tathyasutra/static/js/main.37a967d4.js.map",
+    "main.3e1b8621.css.map": "/tathyasutra/static/css/main.3e1b8621.css.map",
+    "main.4a9b2ac9.js.map": "/tathyasutra/static/js/main.4a9b2ac9.js.map",
     "453.daa1c54f.chunk.js.map": "/tathyasutra/static/js/453.daa1c54f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e627e70a.css",
-    "static/js/main.37a967d4.js"
+    "static/css/main.3e1b8621.css",
+    "static/js/main.4a9b2ac9.js"
   ]
 }
