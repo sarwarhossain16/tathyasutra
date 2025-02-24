@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tathyasutra/static/css/main.137b30f3.css",
-    "main.js": "/tathyasutra/static/js/main.e107994b.js",
+    "main.js": "/tathyasutra/static/js/main.d01e5857.js",
     "static/js/453.daa1c54f.chunk.js": "/tathyasutra/static/js/453.daa1c54f.chunk.js",
     "static/media/digital_bangladesh.jpg": "/tathyasutra/static/media/digital_bangladesh.f3e548b3102b61bd4125.jpg",
     "static/media/flood.jpg": "/tathyasutra/static/media/flood.44a12894c17e9384d99a.jpg",
@@ -10,11 +10,11 @@
     "static/media/padma_bridge.jpg": "/tathyasutra/static/media/padma_bridge.fb0e21b5d8d72a1132f2.jpg",
     "index.html": "/tathyasutra/index.html",
     "main.137b30f3.css.map": "/tathyasutra/static/css/main.137b30f3.css.map",
-    "main.e107994b.js.map": "/tathyasutra/static/js/main.e107994b.js.map",
+    "main.d01e5857.js.map": "/tathyasutra/static/js/main.d01e5857.js.map",
     "453.daa1c54f.chunk.js.map": "/tathyasutra/static/js/453.daa1c54f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.137b30f3.css",
-    "static/js/main.e107994b.js"
+    "static/js/main.d01e5857.js"
   ]
 }
