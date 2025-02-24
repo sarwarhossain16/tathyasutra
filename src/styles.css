@@ -1,9 +1,4 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #c8b1f11c;
-}
-
+/* Header Styling */
 .header {
   display: flex;
   justify-content: space-between;
@@ -11,6 +6,7 @@ body {
   padding: 15px 20px;
   background: white;
   border-bottom: 2px solid #ddd;
+  position: relative;
 }
 
 .logo {
@@ -18,41 +14,177 @@ body {
   height: auto;
 }
 
+/* Desktop Navigation (Hidden on Mobile) */
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 15px;
 }
 
-.nav-item, .login-button {
-  text-decoration: none;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: 0.3s;
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide Desktop Menu on Mobile */
+  }
 }
 
+/* Mobile Hamburger Icon */
+.hamburger-icon {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: block;
+  }
+}
+
+/* Mobile Menu (Sidebar) */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  transition: 0.3s ease-in-out;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu .nav-item, 
+.mobile-menu .login-button, 
+.mobile-menu .language-toggle, 
+.mobile-menu .search-icon {
+  display: block;
+  margin: 10px 0;
+}
+
+/* Download Button */
+.nav-item {
+  background-color: #4B0082;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: #6A0DAD;
+}
+
+/* Login Button */
 .login-button {
   background: #4B0082;
   color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
 }
 
 .login-button:hover {
   background: #6A0DAD;
 }
 
-.download-button {
-    display: inline-block;
-    background-color: #4B0082;
-    color: white;
+/* Language Toggle Button */
+.language-toggle {
+  background: #07580be1;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.language-toggle:hover {
+  background: #07580bc7;
+}
+
+/* Search Icon Button */
+.search-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Search Popup Window */
+.search-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.search-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.search-options {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.close-search {
+  background: #ff0000a6;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.close-search:hover {
+  background: #CC0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
     padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
   }
-  
-  .download-button:hover {
-    background-color: #6A0DAD;
+
+  .mobile-menu {
+    width: 70%;
   }
+
+  .search-popup {
+    width: 90%;
+  }
+}
+
 
 .intro-section {
     text-align: center;
